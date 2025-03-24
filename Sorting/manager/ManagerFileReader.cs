@@ -5,6 +5,7 @@ namespace Sorting.manager
 {
     class ManagerFileReader
     {
+        static ReaderFile reader = new ReaderFile();
         public static int[] Arquivo10TXT()
         {
             ReaderFile reader = new ReaderFile("./inputs/10-aleatorios.txt");
