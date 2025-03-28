@@ -1,4 +1,5 @@
 ﻿using Sorting.manager;
+using Sorting.print;
 
 public class Program
 {
@@ -9,18 +10,16 @@ public class Program
 
         int[] vet = ManagerFileReader.Arquivo10TXT();
 
+        PrintSolutionStatic.ImprimirArrayMesmaLinha(vet, Sorting.enums.Sortings.BUBBLESORT);
+
         ManagerFileSorting.Ordenar(Sorting.enums.Sortings.BUBBLESORT, vet);
 
-
-        ManagerFileSorting.Ordenar(Sorting.enums.Sortings.SELECTIONSORT, vet);
-
-
-        ManagerFileSorting.Ordenar(Sorting.enums.Sortings.INSERTIONSORT, vet);
+        PrintSolutionStatic.ImprimirArrayMesmaLinha(vet, Sorting.enums.Sortings.BUBBLESORT);
 
 
-        //vet = ManagerFileReader.Arquivo100TXT();
+        // Crie um menu que solicite ao usuário qual é o arquivo que será lido e qual algoritmo deverá ser executado
 
-        //ManagerFileSorting.Ordenar(Sorting.enums.Sortings.BUBBLESORT, vet);
+
 
     }
 }
