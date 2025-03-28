@@ -10,12 +10,16 @@ public class Program
 
         ManagerFileSorting.Ordenar(Sorting.enums.Sortings.BUBBLESORT, vet);
 
-        vet = ManagerFileReader.Arquivo100TXT();
 
-        ManagerFileSorting.Ordenar(Sorting.enums.Sortings.BUBBLESORT, vet);
+        ManagerFileSorting.Ordenar(Sorting.enums.Sortings.SELECTIONSORT, vet);
+
+
+        ManagerFileSorting.Ordenar(Sorting.enums.Sortings.INSERTIONSORT, vet);
+
+
+        //vet = ManagerFileReader.Arquivo100TXT();
+
+        //ManagerFileSorting.Ordenar(Sorting.enums.Sortings.BUBBLESORT, vet);
 
     }
-
-
-
 }

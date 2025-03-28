@@ -1,6 +1,7 @@
 ﻿using Sorting.enums;
 using Sorting.print;
 using Sorting.sorting.simple;
+using Sorting.utils;
 
 namespace Sorting.manager
 {
@@ -8,7 +9,7 @@ namespace Sorting.manager
     {
         public static void Ordenar(Sortings algoritmo, int[] vet)
         {
-            int[] ordenado = vet;
+            int[] ordenado = UtilClonar.Clonar(vet);
 
             PrintSolutionStatic.ImprimirArrayMesmaLinha(vet, algoritmo);
 
