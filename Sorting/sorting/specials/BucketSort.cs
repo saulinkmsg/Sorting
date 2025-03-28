@@ -1,4 +1,4 @@
-﻿namespace Sorting.sorting.especials
+﻿namespace Sorting.sorting.specials
 {
     class BucketSort
     {
