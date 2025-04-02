@@ -1,4 +1,4 @@
-﻿using Sorting.basic_class;
+﻿using Sorting.basic_class.@static;
 
 public class Program
 {

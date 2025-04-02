@@ -1,4 +1,4 @@
-﻿namespace Sorting.basic_class
+﻿namespace Sorting.basic_class.@static
 {
     class Fila
     {
@@ -6,8 +6,8 @@
         public int cont;
         public Fila(int n)
         {
-            this.fila = new int[n];
-            this.cont = 0;
+            fila = new int[n];
+            cont = 0;
         }
 
         public bool Inserir(int item)

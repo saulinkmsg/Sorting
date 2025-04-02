@@ -1,4 +1,4 @@
-﻿namespace Sorting.basic_class
+﻿namespace Sorting.basic_class.@static
 {
     class Pilha
     {
@@ -7,8 +7,8 @@
 
         public Pilha(int n)
         {
-            this.pilha = new int[n];
-            this.topo = -1; // posição inválida
+            pilha = new int[n];
+            topo = -1; // posição inválida
         }
 
         public bool Inserir(int item)
