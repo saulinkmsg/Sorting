@@ -32,6 +32,7 @@
             {
                 fila[i] = fila[i + 1];
             }
+
             fila[cont - 1] = -1;
             cont--;
             return tmp;

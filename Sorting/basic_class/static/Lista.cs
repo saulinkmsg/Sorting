@@ -11,7 +11,7 @@
             cont = 0;
         }
 
-        public bool Inserir(int item)
+        public bool InserirFim(int item)
         {
             if (cont < lista.Length)
             {
@@ -26,7 +26,30 @@
             }
         }
 
+        public bool InserirInicio(int item)
+        {
+            return true;// implemente
+        }
 
+        public bool InserirPosicao(int pos)
+        {
+            return true;// implemente
+        }
+
+        public int RemoverFim()
+        {
+            return -1; // implemente
+        }
+
+        public int RemoverInicio()
+        {
+            return -1; // implemente
+        }
+
+        public int RemoverPosicao(int pos)
+        {
+            return -1; // implemente
+        }
 
     }
 }
