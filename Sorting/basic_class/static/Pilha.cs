@@ -48,8 +48,10 @@
 
             for (int i = topo; i > -1; i--)
             {
-                Console.WriteLine(pilha[i]);
+                Console.Write(pilha[i] + " ");
             }
+
+            Console.WriteLine(" ");
         }
     }
 }

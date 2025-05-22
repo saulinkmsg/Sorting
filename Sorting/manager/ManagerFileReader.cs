@@ -53,5 +53,13 @@ namespace Sorting.manager
             return Conversor.ConvertArrayStringsToInts(reader.LerLinhaALinha());
 
         }
+
+        public static int[] Arquivo1000000OrdenadosTXT()
+        {
+            ReaderFile reader = new ReaderFile("./inputs/1000000-ordenados.txt");
+
+            return Conversor.ConvertArrayStringsToInts(reader.LerLinhaALinha());
+
+        }
     }
 }

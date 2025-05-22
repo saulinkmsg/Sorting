@@ -7,20 +7,19 @@ namespace Sorting.manager
     {
         public static void Ordenar(Sortings algoritmo, int[] vet)
         {
-            int[] ordenado;
 
             switch (algoritmo)
             {
                 case Sortings.BUBBLESORT:
-                    ordenado = BubbleSort.Sorting(vet);
+                    BubbleSort.Sort(vet);
                     break;
 
                 case Sortings.SELECTIONSORT:
-                    ordenado = SelectionSort.Sorting(vet);
+                    SelectionSort.Sort(vet);
                     break;
 
                 case Sortings.INSERTIONSORT:
-                    ordenado = InsertionSort.Sorting(vet);
+                    InsertionSort.Sort(vet);
                     break;
 
                 case Sortings.BUCKETSORT:

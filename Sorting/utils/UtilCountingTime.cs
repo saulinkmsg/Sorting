@@ -8,7 +8,7 @@ namespace Sorting.utils
 
         public void Init()
         {
-            stopwatch.Start();
+            stopwatch = Stopwatch.StartNew();
         }
 
         public void Stop()
@@ -16,6 +16,9 @@ namespace Sorting.utils
             stopwatch.Stop();
         }
 
-
+        public string TimeElapsed()
+        {
+            return stopwatch.ToString();
+        }
     }
 }
