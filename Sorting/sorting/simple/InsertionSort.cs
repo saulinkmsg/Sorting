@@ -1,4 +1,6 @@
-﻿namespace Sorting.sorting.simple
+﻿using Sorting.basic_class.dynamic;
+
+namespace Sorting.sorting.simple
 {
     public static class InsertionSort
     {
@@ -29,6 +31,33 @@
                     Trocas++;
                 }
                 vet[j + 1] = x;
+                Atribuicoes++;
+            }
+        }
+
+        public static void Sort(ListaDynamic vet)
+        {
+            int j, x;
+            int n = vet.qtdeItens;
+            Atribuicoes++;
+            for (int i = 1; i < n; i++)
+            {
+                Atribuicoes++;
+                x = vet.AcessarValorNaPosicao(i);
+                Atribuicoes++;
+                j = i - 1;
+                Atribuicoes++;
+
+                while (j >= 0 && vet.AcessarValorNaPosicao(j) > x)
+                {
+                    Comparacoes++;
+                    vet.TrocarValorNaPosicao(vet.AcessarValorNaPosicao(j), j + 1);
+                    Atribuicoes++;
+                    j--;
+                    Atribuicoes++;
+                    Trocas++;
+                }
+                vet.TrocarValorNaPosicao(x, j + 1);
                 Atribuicoes++;
             }
         }

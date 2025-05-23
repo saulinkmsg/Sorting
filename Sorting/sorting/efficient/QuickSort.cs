@@ -28,6 +28,17 @@
 
         private static int Partition(int[] array, int low, int high)
         {
+            int mid = low + (high - low) / 2;
+            Atribuicoes++;
+            int pivotIndex = Mediana(array, low, mid, high);
+            Atribuicoes++;
+
+            int tempPivot = array[pivotIndex];
+            array[pivotIndex] = array[high];
+            array[high] = tempPivot;
+            Atribuicoes += 3;
+            Trocas++;
+
             int pivot = array[high];
             Atribuicoes++;
             int i = low - 1;
@@ -57,6 +68,23 @@
             Trocas++;
 
             return i + 1;
+        }
+
+        private static int Mediana(int[] array, int a, int b, int c)
+        {
+            Comparacoes += 3;
+            if (array[a] > array[b])
+            {
+                if (array[b] > array[c]) return b;
+                else if (array[a] > array[c]) return c;
+                else return a;
+            }
+            else
+            {
+                if (array[a] > array[c]) return a;
+                else if (array[b] > array[c]) return c;
+                else return b;
+            }
         }
     }
 }

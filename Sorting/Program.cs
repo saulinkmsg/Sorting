@@ -4,6 +4,7 @@ using Sorting.sorting.simple;
 using Sorting.sorting.specials;
 using Sorting.utils;
 using Sorting.manager;
+using Sorting.basic_class.dynamic;
 
 
 public class Program
@@ -29,8 +30,10 @@ public class Program
 
 
         //Questao1();
+        //Questao6();
         //Questao7();
-
+        //Questao9();
+        Questao11();
     }
 
     public static void Questao1()
@@ -130,6 +133,103 @@ public class Program
         Console.WriteLine($"RadixSort: Tempo = {Cronometro.TimeElapsed()} ms, Comparacoes = {RadixSort.Comparacoes}, Atribuicoes = {RadixSort.Atribuicoes}, Trocas = {RadixSort.Trocas}");
     }
 
+    public static void Questao6()
+    {
+        UtilCountingTime Cronometro = new UtilCountingTime();
+
+        int[] arrayMilhaoItens;
+
+        arrayMilhaoItens = ManagerFileReader.Arquivo1000000OrdenadosTXT();
+        HeapSort.Comparacoes = 0;
+        HeapSort.Atribuicoes = 0;
+        HeapSort.Trocas = 0;
+        Cronometro.Init();
+        HeapSort.Sort(arrayMilhaoItens);
+        Cronometro.Stop();
+        Console.WriteLine($"HeapSort: Tempo = {Cronometro.TimeElapsed()} ms, Comparacoes = {HeapSort.Comparacoes}, Atribuicoes = {HeapSort.Atribuicoes}, Trocas = {HeapSort.Trocas}");
+
+        arrayMilhaoItens = ManagerFileReader.Arquivo1000000OrdenadosTXT();
+        MergeSort.Comparacoes = 0;
+        MergeSort.Atribuicoes = 0;
+        MergeSort.Trocas = 0;
+        Cronometro.Init();
+        MergeSort.Sort(arrayMilhaoItens);
+        Cronometro.Stop();
+        Console.WriteLine($"MergeSort: Tempo = {Cronometro.TimeElapsed()} ms, Comparacoes = {MergeSort.Comparacoes}, Atribuicoes = {MergeSort.Atribuicoes}, Trocas = {MergeSort.Trocas}");
+
+        arrayMilhaoItens = ManagerFileReader.Arquivo1000000OrdenadosTXT();
+        QuickSort.Comparacoes = 0;
+        QuickSort.Atribuicoes = 0;
+        QuickSort.Trocas = 0;
+        Cronometro.Init();
+        QuickSort.Sort(arrayMilhaoItens);
+        Cronometro.Stop();
+        Console.WriteLine($"QuickSort: Tempo = {Cronometro.TimeElapsed()} ms, Comparacoes = {QuickSort.Comparacoes}, Atribuicoes = {QuickSort.Atribuicoes}, Trocas = {QuickSort.Trocas}");
+
+        arrayMilhaoItens = ManagerFileReader.Arquivo1000000OrdenadosTXT();
+        ShellSort.Comparacoes = 0;
+        ShellSort.Atribuicoes = 0;
+        ShellSort.Trocas = 0;
+        Cronometro.Init();
+        ShellSort.Sort(arrayMilhaoItens);
+        Cronometro.Stop();
+        Console.WriteLine($"ShellSort: Tempo = {Cronometro.TimeElapsed()} ms, Comparacoes = {ShellSort.Comparacoes}, Atribuicoes = {ShellSort.Atribuicoes}, Trocas = {ShellSort.Trocas}");
+
+        arrayMilhaoItens = ManagerFileReader.Arquivo1000000OrdenadosTXT();
+        BubbleSort.Comparacoes = 0;
+        BubbleSort.Atribuicoes = 0;
+        BubbleSort.Trocas = 0;
+        Cronometro.Init();
+        BubbleSort.Sort(arrayMilhaoItens);
+        Cronometro.Stop();
+        Console.WriteLine($"BubbleSort: Tempo = {Cronometro.TimeElapsed()} ms, Comparacoes = {BubbleSort.Comparacoes}, Atribuicoes = {BubbleSort.Atribuicoes}, Trocas = {BubbleSort.Trocas}");
+
+        arrayMilhaoItens = ManagerFileReader.Arquivo1000000OrdenadosTXT();
+        InsertionSort.Comparacoes = 0;
+        InsertionSort.Atribuicoes = 0;
+        InsertionSort.Trocas = 0;
+        Cronometro.Init();
+        InsertionSort.Sort(arrayMilhaoItens);
+        Cronometro.Stop();
+        Console.WriteLine($"InsertionSort: Tempo = {Cronometro.TimeElapsed()} ms, Comparacoes = {InsertionSort.Comparacoes}, Atribuicoes = {InsertionSort.Atribuicoes}, Trocas = {InsertionSort.Trocas}");
+
+        arrayMilhaoItens = ManagerFileReader.Arquivo1000000OrdenadosTXT();
+        SelectionSort.Comparacoes = 0;
+        SelectionSort.Atribuicoes = 0;
+        SelectionSort.Trocas = 0;
+        Cronometro.Init();
+        SelectionSort.Sort(arrayMilhaoItens);
+        Cronometro.Stop();
+        Console.WriteLine($"SelectionSort: Tempo = {Cronometro.TimeElapsed()} ms, Comparacoes = {SelectionSort.Comparacoes}, Atribuicoes = {SelectionSort.Atribuicoes}, Trocas = {SelectionSort.Trocas}");
+
+        arrayMilhaoItens = ManagerFileReader.Arquivo1000000OrdenadosTXT();
+        BucketSort.Comparacoes = 0;
+        BucketSort.Atribuicoes = 0;
+        BucketSort.Trocas = 0;
+        Cronometro.Init();
+        BucketSort.Sort(arrayMilhaoItens);
+        Cronometro.Stop();
+        Console.WriteLine($"BucketSort: Tempo = {Cronometro.TimeElapsed()} ms, Comparacoes = {BucketSort.Comparacoes}, Atribuicoes = {BucketSort.Atribuicoes}, Trocas = {BucketSort.Trocas}");
+
+        arrayMilhaoItens = ManagerFileReader.Arquivo1000000OrdenadosTXT();
+        CountingSort.Comparacoes = 0;
+        CountingSort.Atribuicoes = 0;
+        CountingSort.Trocas = 0;
+        Cronometro.Init();
+        CountingSort.Sort(arrayMilhaoItens);
+        Cronometro.Stop();
+        Console.WriteLine($"CountingSort: Tempo = {Cronometro.TimeElapsed()} ms, Comparacoes = {CountingSort.Comparacoes}, Atribuicoes = {CountingSort.Atribuicoes}, Trocas = {CountingSort.Trocas}");
+
+        arrayMilhaoItens = ManagerFileReader.Arquivo1000000OrdenadosTXT();
+        RadixSort.Comparacoes = 0;
+        RadixSort.Atribuicoes = 0;
+        RadixSort.Trocas = 0;
+        Cronometro.Init();
+        RadixSort.Sort(arrayMilhaoItens);
+        Cronometro.Stop();
+        Console.WriteLine($"RadixSort: Tempo = {Cronometro.TimeElapsed()} ms, Comparacoes = {RadixSort.Comparacoes}, Atribuicoes = {RadixSort.Atribuicoes}, Trocas = {RadixSort.Trocas}");
+    }
+
     public static void Questao7()
     {
         int[] arrayCemAleatorios;
@@ -173,6 +273,36 @@ public class Program
 
         f.Mostrar();
         p.Mostrar();
+    }
+
+    public static void Questao9()
+    {
+        int[] arrayMilhaoAleatorios;
+        arrayMilhaoAleatorios = ManagerFileReader.Arquivo1000000TXT();
+        Lista l = new Lista(1000000);
+
+        for (int i = 0; i < arrayMilhaoAleatorios.Length; i++)
+        {
+            l.InserirFim(arrayMilhaoAleatorios[i]);
+        }
+        HeapSort.Sort(l.lista);
+    }
+
+    public static void Questao11()
+    {
+        int[] arrayMilhaoAleatorios;
+        arrayMilhaoAleatorios = ManagerFileReader.Arquivo1000000TXT();
+        ListaDynamic l = new ListaDynamic();
+
+        for (int i = 0; i < arrayMilhaoAleatorios.Length; i++)
+        {
+            l.InserirFim(arrayMilhaoAleatorios[i]);
+        }
+        InsertionSort.Sort(l);
+        for(int i = 0; i < l.qtdeItens; i++)
+        {
+            Console.Write(l.AcessarValorNaPosicao(i) + " ");
+        }
     }
 
 }

@@ -1,15 +1,15 @@
 ﻿namespace Sorting.basic_class.dynamic
 {
-    public class FilaDynamic
+    public class PilhaDynamic
     {
         public CelulaFilaEPilha? primeiro;
         public CelulaFilaEPilha? ultimo;
-        public FilaDynamic()
+        public PilhaDynamic()
         {
 
         }
 
-        public FilaDynamic(int item)
+        public PilhaDynamic(int item)
         {
             this.primeiro = this.ultimo = new CelulaFilaEPilha(item);
         }
@@ -17,14 +17,11 @@
         public bool Inserir(int item)
         {
             CelulaFilaEPilha novoItem = new CelulaFilaEPilha(item);
-            if (ultimo != null)
+            novoItem.proximo = primeiro;
+            primeiro = novoItem;
+            if(ultimo == null)
             {
-                ultimo.proximo = novoItem;
-            }         
-            ultimo = novoItem;  
-            if(primeiro == null)
-            {
-                primeiro = ultimo;
+                ultimo = primeiro;
             }
             return true;
         }
@@ -33,7 +30,7 @@
         {
             if (primeiro == null)
             {
-                Console.WriteLine("Não é possível remover da fila.");
+                Console.WriteLine("Não é possível remover da pilha.");
                 return 0;
             }
 
